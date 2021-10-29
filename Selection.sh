@@ -1,10 +1,12 @@
 #!/bin/bash -x
 
-Dice1=$((RANDOM%6))
-Dice2=$((RANDOM%6))
+for i in {1..5}
+do
+Num=$(( ( RANDOM% 99 )+100 ))
+Sum=$(($Sum+$Num))
+Avg=$(($Sum/5))
+done
 
-sum=$(($Dice1 + $Dice2))
-echo Sum= $sum
-
-
+echo Sum = $(($Sum))
+echo Avg = $(($Avg))
 
