@@ -1,17 +1,7 @@
 #!/bin/bash -x
 
-read -p " Enter Date:-" date
-read -p " Enter Month:-" Month
+inch=1/12;
 
-if (( ($Month <= 6 & $date <= 20) & ($Month >= 3 & $date >=20) ))
-then
-        echo $Month/$date "True";
-elif (( ($Month >= 3 & $Month < 6) & ($date<=31)  ))
-then
-        echo $date/$Month "True";
-
-else
-
-        echo "False";
-fi
-
+NumToConvert=42
+UnitConv=$(($NumToConvert*$inch))
+echo 42 inches = $UnitConv feets
