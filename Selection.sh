@@ -1,21 +1,8 @@
 #!/bin/bash -x
 
-read -p " Enter the year: " year
-
-if [ $((year % 4)) -eq 0 ]
-then
-  if [ $((year % 100)) -eq 0 ]
-    then
-    if [ $((year % 400)) -eq 0 ]
-          then
-        echo "its a leap year"
-    else
-           echo "its not a leap year"
-    fi
-  else
-  echo "Its a leap year"
-  fi
+FLIP=$(($(($RANDOM%10))%2))
+if [ $FLIP -eq 1 ];then
+    echo "heads"
 else
- echo "its not a leap year"
-
+    echo "tails"
 fi
