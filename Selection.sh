@@ -1,12 +1,17 @@
 #!/bin/bash -x
 
-for i in {1..5}
-do
-Num=$(( ( RANDOM% 99 )+100 ))
-Sum=$(($Sum+$Num))
-Avg=$(($Sum/5))
-done
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
 
-echo Sum = $(($Sum))
-echo Avg = $(($Avg))
+if (( ($Month <= 6 & $date <= 20) & ($Month >= 3 & $date >=20) ))
+then
+        echo $Month/$date "True";
+elif (( ($Month >= 3 & $Month < 6) & ($date<=31)  ))
+then
+        echo $date/$Month "True";
+
+else
+
+        echo "False";
+fi
 
